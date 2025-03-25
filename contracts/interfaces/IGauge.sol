@@ -81,20 +81,20 @@ interface IGauge {
 
     /// @notice Retrieve rewards for an address.
     /// @dev Throws if not called by same address or voter.
-    /// @param _account .
+    /// @param _account Account to get reward for.
     function getReward(address _account) external;
 
     /// @notice Deposit LP tokens into gauge for msg.sender
-    /// @param _amount .
+    /// @param _amount The amount of tokens to deposit.
     function deposit(uint256 _amount) external;
 
     /// @notice Deposit LP tokens into gauge for any user
-    /// @param _amount .
+    /// @param _amount The amount of tokens to deposit.
     /// @param _recipient Recipient to give balance to
     function deposit(uint256 _amount, address _recipient) external;
 
     /// @notice Withdraw LP tokens for user
-    /// @param _amount .
+    /// @param _amount The amount of tokens to withdraw.
     function withdraw(uint256 _amount) external;
 
     /// @dev Notifies gauge of gauge rewards. Assumes gauge reward tokens is 18 decimals.
