@@ -10,7 +10,7 @@ import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
 contract PoolFees {
     using SafeERC20 for IERC20;
     address internal immutable pool; // The pool it is bonded to
-    address internal immutable token0; // token0 of pool, saved localy and statically for gas optimization
+    address internal immutable token0; // Token0 of pool, saved localy and statically for gas optimization
     address internal immutable token1; // Token1 of pool, saved localy and statically for gas optimization
 
     error NotPool();
